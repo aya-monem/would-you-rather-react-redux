@@ -1,13 +1,273 @@
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin:20px auto;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  * {
+    text-align: center;
+  }
+      /* Login Component */
+   .login-container{
+    width:30%;
+    height:470px;
+    padding: 0;
+    margin: 18px auto;
+    border:3px solid #ddd;
+    border-radius: 5px;
+  }
+  .login-header{
+    background-color:#ddd;
+  }
+  .login-header h3{
+    margin : 0px auto;
+    padding-top : 10px
+  }
+  .login-header p{
+    padding-bottom: 10px;
+  }
+  .login-img{
+    width: 150px;
+    height: 150px;
+  }
+  .login-container h2{
+    color: #00c8ff;
+  }
+  .login-container .signBtn,  .login-container select{
+    display: inline-block;
+    width : 90%;
+    cursor: pointer;
+  }
+  .login-container select{
+      border:2px solid #ddd;
+      margin-bottom: 20px;
+      padding:12px;
+      font-size: 15px;
+  }
+   
+  .login-container .signBtn{
+    text-decoration: none;
+    font-size: 18px;
+    padding: 7px;
+    color: white;
+    background-color: #00BFFF;
+    border : none;
+  }
+  .login-container .signBtn[disabled]{
+    opacity: 0.35;
+    pointer-events: none;
+  }
+            /* Navigation Component */
+   .nav-container {
+     margin :30px auto 20px auto;
+     font-size: 17px;
+     font-weight: bold;
+
+   }
+   .nav-container .link{
+        text-decoration: none;
+        color: black;
+        padding: 9px 15px;
+   }
+   .signOut{
+      border :none;
+      background-color: white;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bolder;
+   }
+   .nav-container p{
+        position: relative;
+        display:inline-block; 
+        padding: 0px 18px;
+        margin: 0px 50px 0px 70px;
+        cursor: pointer;
+   }
+   .icon{
+     position : absolute;
+     bottom : -5px;
+     right : -35px; 
+     width:40px;
+     height:40px;
+     border-radius: 50%;
+     border: 2px solid #ddd;
+   }
+
+   .nav-container .link:hover {
+     background-color: #00BFFF;
+   }
+   .nav-container .link:active{
+    background-color: #00BFFF;
+   }
+
+   .nav-container hr{
+      border: none;
+      height:3px;
+      background-color: #00BFFF;
+   }
+
+             /* dashBoard Component  */
+   .dashboard-container {
+    width:38%;
+    margin-left : 30%;
+    border : 2px solid #ddd;
+    border-radius: 5px;
+
+  }
+  .dashboard-container .category-btn {
+    border: 0;
+    width : 50%;
+    font-size: 18px;
+    padding:10px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .dashboard-container .category-btn:hover{
+    background-color: #00BFFF;
+  }
+  .dashboard-container .category-btn.active{
+     border : none;
+     background-color: #00BFFF;
+  }
+  .questions-list{
+     list-style: none;
+     padding:0px;
+     margin:0px;
+  }
+  .question-list-item{
+    border: 2px solid #ddd;
+    margin : 20px 35px;
+    /* padding: 0px 10px; */
+  }
+
+  .question-title{
+    margin : 0px;
+    text-align: left;
+    padding:10px 20px;
+    background-color: #ddd;
+  }
+  .question-list-item hr {
+    margin-top : 0px;
+  }
+  .question-body{
+  padding : 10px 20px;
+}
+  .question-details , .question-avatar{
+      display : inline-block;
+      vertical-align: middle;
+  }
+  .question-avatar{
+    width: 70px;
+    height : 70px;
+    border-radius: 50%;
+    border: 3px solid rgb(190, 190, 190);
+    padding: 5px ;
+    margin-right : 25px;
+  }
+  .question-details{
+    width: 70%;
+    border-left : 2px solid #ddd;
+  }
+  .question-text{
+    padding-left:5px;
+     margin-top:0px;
+  }
+  .view-poll-btn{
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    border: 2px solid #ddd ;
+    background-color: #ddd;
+    width : 85%;
+    font-size: 18px;
+    padding:6px 18px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .view-poll-btn:hover{
+    background-color: #00BFFF;
+    border : 2px solid #00BFFF;
+  }
+
+  .newPoll-container{
+    width : 35%;
+    margin : 10px auto;
+    border: 2px solid gray ;
+    border-radius: 5px;
+  }
+  .newPoll-container input , .newPoll-container button{
+     width : 80%;
+     padding : 8px 18px;
+     border-radius: 5px;
+     font-size: 18px;
+  }
+  .newPoll-container input{
+    text-align: left;
+    border:2px solid gray ;  }
+  .newPoll-container button{
+    border:2px solid #00BFFF;
+    background-color: #00BFFF;
+    margin: 20px auto;
+    cursor: pointer;
+  }
+  .leaderBoard-container{
+    width: 450px;
+    margin : 0px auto;
+    padding : 0px;
+    list-style: none;
+  }
+  .user-container{
+    border : 3px solid gray;
+    border-radius: 4px;
+    margin-bottom:10px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .user-container img , .middle ,.score{
+    display : inline-block;
+    vertical-align: middle;
+  }
+  .user-container img {
+     padding: 0px;
+     margin : 5px;
+  }
+  .middle{
+    border-right: 3px solid gray;
+    border-left: 3px solid gray;
+    padding :10px 20px 0px 20px;
+    margin : 5px 20px ;
+    text-align: left;
+   }
+.middle h3{
+  margin-top: 0px;
+}
+.middle p {
+  margin : 20px 0px;
+}
+.middle span{
+  margin-left : 10px;
+  font-size:20px;
+}
+.score{
+  text-align: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.score span{
+  color : white;
+  background-color: #00BFFF;
+  padding:15px 20px;
+  border-radius: 50%;
+  font-size: 20px;
 }
+
+
+   
+  
+  
+  
