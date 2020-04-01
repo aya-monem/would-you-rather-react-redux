@@ -3,11 +3,7 @@ import { Link } from 'react-router-dom'
 import { connect } from 'react-redux';
 import setAuthedUser from '../actions/authedUser'
 import Login from './Login'
-// import DashBoard from './DashBoard'
-// import NewPoll from './NewPoll'
-// import LeaderBoard from './LeaderBoard'
 
- 
 function Navigation (props){
     
         const { user , dispatch} = props

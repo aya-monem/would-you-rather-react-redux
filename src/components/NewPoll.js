@@ -31,12 +31,10 @@ class NewPoll extends React.Component{
         this.setState({
               tohome : true
         });
-       
-                      
+                          
     }
     render(){
         const {optionOne , optionTwo } = this.state;
-        // const {authedUser} = this.props
         return(
            this.state.tohome === true ? (
                 <Redirect  to='/' />
@@ -47,16 +45,15 @@ class NewPoll extends React.Component{
                         <p>Complete the question:</p>  
                         <h3>Would you rather...</h3>
                         <input placeholder='Enter Option One Here'
-                        onChange ={this.getOptionOne} 
-                        value={this.state.optionOne}
-                            name='optionOne' >
+                            onChange ={this.getOptionOne} 
+                            value={this.state.optionOne}
+                                name='optionOne' >
                         </input>
                         <h4>OR</h4>
                         <input placeholder='Enter Option Two Here'
-                        onChange ={this.getOptionTwo} 
-                        value={this.state.optionTwo}
-                        name='optionTwo'
-                        >
+                            onChange ={this.getOptionTwo} 
+                            value={this.state.optionTwo}
+                                 name='optionTwo'>
                         </input>
                         <button type='button' disabled={optionOne === '' || optionTwo === ''}
                         onClick={this.handleSubmitPoll}>

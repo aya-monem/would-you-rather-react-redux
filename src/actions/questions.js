@@ -21,11 +21,11 @@ export default function receiveQuestions(questions){
     }
 }
 
-function answerQuestionToQuestion( authedUser , id , answer ){
+function answerQuestionToQuestion( {authedUser , qid , answer} ){
     return{
         type : ANSWER_QUSTION_TO_QUESTION,
         authedUser,
-        id,
+        qid,
         answer,
     }
 }
@@ -39,7 +39,7 @@ export function handleAddQuestion({optionOne , optionTwo , authedUser}){
             optionTwoText : optionTwo ,
             author : authedUser,
         }
-        // console.log(questionInfo)
+        
         return saveQuestion(questionInfo)
             .then(question => {
                 dispatch(addQuestionToQuestions(question))

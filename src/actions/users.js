@@ -18,11 +18,11 @@ export function addQuestionToUser({id , author}){
     }
 }
 
-export function answerQuestionToUser( authedUser , id , answer ){
+export function answerQuestionToUser( {authedUser , qid , answer} ){
     return{
         type: ANSWER_QUESTION_TO_USER,
         authedUser,
-         id,
+         qid,
         answer
     }
 }
