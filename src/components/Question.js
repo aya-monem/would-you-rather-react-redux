@@ -1,12 +1,12 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
+// import Notfound from './Notfound'
 
 
-class Question extends React.Component{
-    render(){
-        const  {users , question , unanswered } = this.props
-        // console.log(authedUser);
+function Question(props){
+        const  {users , question , unanswered } = props
+        //  console.log(props);
         return(
              <div>
                 <h4 className="question-title">{users[question.author].name} asks:</h4>
@@ -20,7 +20,7 @@ class Question extends React.Component{
                             <span><b>OR </b> {question.optionTwo.text}</span>  <br/>
                         </p>
 
-                     {/* {question.id} */}
+                    
                          {( question.id && unanswered === true )   && 
                             <Link to={`/questions/${question.id}`} className='view-poll-btn'>
                                   Answer Poll
@@ -32,16 +32,13 @@ class Question extends React.Component{
                                   View Poll
                              </Link>
                             } 
-                         {( question.id === undefined )   && 
-                            <Link to='/question/notfound' />
-                                    
-                        } 
+                         {( question.id === undefined )   && null }
+                            
                        
                     </div>
                 </div>
              </div>
         )
-    }
 }
 
 function mapStateToProps({users , authedUser } , {question , unanswered}){

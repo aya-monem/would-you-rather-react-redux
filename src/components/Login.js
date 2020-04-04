@@ -43,7 +43,7 @@ class Login extends React.Component{
                     )}
                  </select>
                  
-                     <Link  to='/' className='signBtn'
+                     <Link  to='/home' className='signBtn'
                      disabled={this.state.disabled} 
                      onClick={() => this.props.dispatch(setAuthedUser(authedUser)) }>
                           Sign in 

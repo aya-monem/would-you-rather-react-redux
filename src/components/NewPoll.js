@@ -37,7 +37,7 @@ class NewPoll extends React.Component{
         const {optionOne , optionTwo } = this.state;
         return(
            this.state.tohome === true ? (
-                <Redirect  to='/' />
+                <Redirect  to='/home' />
             ) : (
                   <div className='newPoll-container'>
                         <h1>Create New Question </h1> 
