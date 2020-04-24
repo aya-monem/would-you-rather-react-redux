@@ -21,3 +21,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+
+
+deploy :
+
+https://would-you-rather-react-redux.netlify.com/
